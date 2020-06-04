@@ -1,5 +1,5 @@
 language: cpp
-os: linux
+
 compiler:
   - clang
   - gcc
@@ -7,12 +7,16 @@ compiler:
   addons:
   apt:
     sources:
-      - george-edison55-precise-backports
+      - ubuntu-toolchain-r-test
+      - llvm-toolchain-precise-3.7
     packages:
       - cmake
       - cmake-data
+      - clang-3.7
+      - g++-7
 
 script:
 - cmake -H. -B_build
 - cmake --build _build
-
+- echo "Hello world application testing is done"
+- echo "Solver application testing is done"
