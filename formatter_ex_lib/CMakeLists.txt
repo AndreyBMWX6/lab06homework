@@ -5,9 +5,8 @@ project(formatter_ex)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_library(formatter STATIC ../formatter_lib/formatter.cpp)
-
 include_directories(../formatter_lib)
+add_subdirectory(../formatter_lib formatter)
 
 add_library(formatter_ex STATIC ${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex.cpp)
 
