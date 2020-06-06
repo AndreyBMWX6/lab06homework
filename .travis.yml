@@ -16,7 +16,6 @@ addons:
    - g++-7
 
 script:
- - cd solver_application
  - cmake -H. -B_build
  - cmake --build _build
  - cmake --build _build --target solver
