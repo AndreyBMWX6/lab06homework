@@ -1,22 +1,40 @@
 language: cpp
-
-compiler:
- - gcc
- - clang
+jobs:
+  include:
+    - os: osx
+      script:
+        - cmake -H. -B_build
+        - cmake --build _build
+        - cd _build
+        - cpack -G DragNDrop
+        - cd ..
+    - os: linux
+      script:
+        - cmake -H. -B_build
+        - cmake --build _build
+        - cd _build
+        - cpack -G DEB
+        - cpack -G RPM
+        - cd ..
 
 addons:
  apt:
   sources:
-   - ubuntu-toolchain-r-test
-   - llvm-toolchain-precise-3.7
+
   packages:
    - cmake
    - cmake-data
-   - clang-3.7
-   - g++-7
+   - rpm
 
-script:
- - cmake -H. -B_build
- - cmake --build _build
- - cmake --build _build --target solver
- - echo "Solver application testing is done"
+deploy:
+  provider: releases
+  api_key:
+    secure: >-
+      lAZ6E3bw8vtLAgRTnriZdBgWJOuKPQO9GwMN0qbjwf0dD95GLPcuCyiaDaJDUHzoqoiy6PJMumgCx+TJGGOzahHDFob9hg9xeecwYUzb+g+vSbV/6e3Ly1m+itXUpHkY2HF0dXajlYSpcGxjoDmoI2NEYJ/EEY3wKOl3vsmOts615zI+a8v+UTrXtXsOsPEi6U2wAOxoaVLzsdvaRMY7SphTX5MLgiWUXoFdocqekcdhc/IncQCa1Z0tfH/ln4C66h6DmKvFdBq1txC4FzVjhz/A0N2W4lIgPhsuju9sVORQl/cwyoa01vz1yvomjCPe7wPEV33DFnytvliCkey4xaCv5gY8ReaxcnKccKZ+YpYi6tFb8QSAILvIZVfj7saM0WtbSbkiJYx9WKCjidWd2UkVR1xe1a8BMNc4Y3f1IoeoAl0NAsQ1TbOOblaBVRYbMUcCH+w12SXGyNV3ixGdwU26N/jfKzbwkxUM2NzfLktu4QM/sb1Quike4WDH0t5oIvOdBYCENrpHSnGM/Ns/9fb/1Gj5/0eFvmuRmysJDrUynDkyJ875YoWeqslVYFo+yUGKegEZhXlfXbyTAkccRfOwWhPBEtaKNKv97B9EJaoOdscz1vx9EHnRg/CeJqR6Di4qB/Vrr6ZpHVIFDykjYbLomvR9GXcCc1CCCENnacY=
+  file:
+    - ./_build/solver-0.1.0.-Darwin.dmg
+       - ./_build/solver-0.1.0.-Linux.deb
+       - ./_build/solver-0.1.0.-Linux.rpm
+  cleanup: false
+  on:
+    tags: true
