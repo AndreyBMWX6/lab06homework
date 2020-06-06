@@ -32,6 +32,6 @@ deploy:
        - ./_build/solver-0.1.0.-Linux.deb
        - ./_build/solver-0.1.0.-Linux.rpm
 
-  skip_cleanup: 'true'
+  cleanup: 'false'
 
   
