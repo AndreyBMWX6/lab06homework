@@ -30,7 +30,7 @@ deploy:
   provider: releases
   api_key:
     secure: >-
-      h0ffy1Jul2EK/yfMzxirxUt+4/RDinMcsrJat5QoAG+8TKK6SVEFr43SA7+EZUccGiPNm22jH+JjUr8mwk+rYoqhe+HayI3kzKxZrS6bf2DlUk5r6qD3VHr73NyIpaRA60Zwii4mYySI1yYxrKgMvisYJswXPjjqt6fU4RyKt7sqSFBBrCfCfwipU9dMyo+1Gd64Ba4rrkdhW+Di75aBBGx82412V4ZeAXf3aGqwNtXRoy87D3F4uWmP/6ExLygOhw1hQMZaPjgjdgzAXdbdRtU7psn6ezgUgw0q6Dl1qJ2r1tBQI5GoP7yPrDqxhKfh47gVv5auJFH4dqjm1QmgjgBGUQP6kE9YLJqjltnIpLRWXC6bxHQqCacRlRJUMKCWhn8Nokx59SOjpLjhuXVLCKHrLenKr4N7tczhHJAnk0ICW4rYYe9T7zK6blGfODOZ/+puOybXiuHC0LfH6d9mfGuoVzD1ZUn5Kx7OflFQ6sbqpAM6JN5InMOXp+UbsQj6OGqp6MrfmKdzWW/GrOS9KZXc+B8usJgl6g6Rf7ErS2WkoA5DTMpXmjaY6E6FVa7BVg086tYcsljcFrP5/iC5W7uMS/wwYbXT3VEuDyr4Pbc8mcoxAF7OU6RdU+U07TGh3ZGFnANvyBz82Wv0O/WsIQuHOx/Pohiv2iV7t9rh4tE=
+      nMIGJAoGBAKY1mJtfyxF51Z8XSE4q/kLixEUegc4UGyP0lTH/URfJ3Yg7HzNwOXNg\nxWYtBWg8foI6H71J25iDGFYFA7ihY1GwDDlfd/RmYzBHD3nrVRdzYvvqKZgAfS9J\nvQnqfMVBRNYlP6osvgf394BvOTCrXh7WEQX6zLD0PO1wKgIEHhBzAgMBAAE=
   file:
     - ./_build/solver-0.1.0.-Darwin.dmg
        - ./_build/solver-0.1.0.-Linux.deb
