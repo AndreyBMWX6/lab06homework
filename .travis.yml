@@ -25,8 +25,7 @@ addons:
     - rpm
 deploy:
   provider: releases
-  api_key:
-    secure: sLTliaUy06CfpwSWMQMQJ+7IWoiA2bd1phBIdyrqMHqOKzmy/zMBgrXYQ/P3+mlaLyOm33pDxV9c+ZCWG290flel2dJiel6ZQl98/LQbV3Er1VYrH+8ULQqU5vDk5K3pRRPM1vOo9EJ74SY/v9hobtPMT4ALl+lOhFkKQvZpAv28g3adVVUUKVg1Mb6fUgFwFmV/Jvb3e6TZhOnO5U29urza73A2N80v/gWM9e5Gjz2tX1L+rmH6eMsWP5dply1S1zBzsDBqghslAMRzNQMUrleiECW/rBjUhAul2OJXQBhPGc2t1+Qo6ucDx9BJXNb4DmMiYwMPJy6BwB/mfPPG+1oA5yGLrwpYeVnrp/W1ukQkC/BmXJOKFz8sJ2Nh7KrNT7+0/M/sPlWB7otcQlMw7SrBGN80tWE2lo7E6B2Nv4mW2dzNdC05ir6YNJP7hbsa0WEf8wzlz0y6AYZDxVIjbqIwXDzw09PVXxcwAb0WgPOAnIBBA1YgY+PL/nQkP+c0d1rKhJK1AoiZC1toQtb4eLi/nYzTef/D9xM9vJ4dX9WZyfSaDXURBTBjje5KyShQ4RmFQ09OSuzDw8yyn6lmzIgo1xnD6gcjBqf7rf47W0nCawmFQ4SNMA/gJAaYDfB2iahpIxKiCJRK81pgJW87Byio5ZD2g37UobVpSQ++TTw=
+  api_key: d0d74b63df558c82e61614bc83cf79e34c2f5e8b
   file:
     - ./_build/solver-0.1.0.-Darwin.dmg
        - ./_build/solver-0.1.0.-Linux.deb
