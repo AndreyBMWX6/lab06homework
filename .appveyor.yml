@@ -17,7 +17,7 @@ deploy:
   release: $(APPVEYOR_REPO_TAG_NAME)
   description: Release description
   provider: GitHub
-  Authorization: d0d74b63df558c82e61614bc83cf79e34c2f5e8b
+  Authorization: Bearer v2.hc7dntia18ecoocfqedj
   artifact: solver
   'on':
     APPVEYOR_REPO_TAG: true
